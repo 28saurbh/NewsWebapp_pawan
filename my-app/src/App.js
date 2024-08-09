@@ -1,13 +1,14 @@
+// src/App.js
+import React from 'react';
 import './App.css';
+import AllRoutes from './routes/index'; // Ensure this path is correct
 
 function App() {
     return (
-        <div className="bg-black" >
-            <div>
-                <div><h2 className='text-white'>NEWSLETTER</h2></div>
-                <div> dfsdf  </div>
-            </div>
-           
+        <div className="App">
+            
+            <AllRoutes />
+            
         </div>
     );
 }
