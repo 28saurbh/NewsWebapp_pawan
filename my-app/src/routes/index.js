@@ -1,15 +1,18 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+// src/routes/index.js
+import React from 'react';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import Home from '../component/Home'; // Adjust the path if needed
 
-function index() {
-    <Routes>
-        <Route path="/" >
-            <Route index element={<Home />} />
-            {/* <Route path="blogs" element={<Blogs />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="*" element={<NoPage />} /> */}
-        </Route>
-    </Routes>
+function Index() {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<Home />} />
+                <Route path="*" element={<Home />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
-export default index
+export default Index;
