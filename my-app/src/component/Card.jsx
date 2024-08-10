@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
-function Card() {
+function Card(props) {
 	return (
 		<div>
 			{/* content */}
-			<div className="bg-white mt-5 p-3 tracking-wide" style={{boxShadow: "-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.32)"}}>
+			<div
+				className="bg-white mt-5 p-3 tracking-wide"
+				style={{
+					boxShadow: "-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.32)",
+				}}
+				onClick={() => props.setOpenModal(true)}
+			>
 				<div>
 					<h3 className="text-base">
 						London to Istanbul by train: This 10-day rail adventure is a slow
@@ -38,11 +44,17 @@ function Card() {
 
 export default Card;
 
-export function ImgCard() { 
+export function ImgCard(props) {
 	return (
 		<>
 			{/* image */}
-			<div className="relative" style={{boxShadow: "-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.32)"}}>
+			<div
+				className="relative"
+				style={{
+					boxShadow: "-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.32)",
+				}}
+				onClick={() => props.setOpenModal(true)}
+			>
 				<div>
 					<img
 						src="https://cloudfront-us-east-2.images.arcpublishing.com/reuters/YFCMGVFJTVL2NJB4WPQZZHEEY4.jpg"
