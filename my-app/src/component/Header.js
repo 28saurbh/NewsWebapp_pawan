@@ -5,7 +5,7 @@ function Header() {
         <div className="bg-black">
             <div className="flex items-center justify-between mx-3">
                 <div>
-                    <h1 className="text-white text-xl select-none">NEWSLETTER</h1>
+                    <h1 className="text-white text-xl select-none" >NEWSLETTER</h1>
                 </div>
                 <div>
                     <div className="flex items-center justify-center p-5">

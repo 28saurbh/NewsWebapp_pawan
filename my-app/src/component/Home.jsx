@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import CategoryTab from "./CategoryTab";
 import { CarouselWithContent } from "./CarouselWithContent";
+import Main from "./Main";
 // import {useNavigate} from 'react-router-dom'
 
 function Home() {
@@ -15,6 +16,7 @@ function Home() {
 				<Header />
 				<CategoryTab/>
 				<CarouselWithContent/>
+				<Main/>
 			</div>
 		</>
 	);
