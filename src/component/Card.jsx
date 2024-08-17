@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+
+
 function Card(props) {
 	return (
 		<div>
@@ -9,7 +11,7 @@ function Card(props) {
 				style={{
 					boxShadow: "-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.32)",
 				}}
-				onClick={() => props.setOpenModal(true)}
+				onClick={() => props.navigate(`/news/${props.id}`)}
 			>
 				<div>
 					<h3 className="text-base">
@@ -53,7 +55,7 @@ export function ImgCard(props) {
 				style={{
 					boxShadow: "-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.32)",
 				}}
-				onClick={() => props.setOpenModal(true)}
+				onClick={() => props.navigate(`/news/${props.id}`)}
 			>
 				<div>
 					<img

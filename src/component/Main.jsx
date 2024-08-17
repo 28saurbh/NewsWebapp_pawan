@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import Card, { ImgCard } from "./Card";
-import { Button, Modal } from "flowbite-react";
-import UserImg from "./Images/userpng.png";
-import MsgPng from "./Images/msg.png";
-import SavePng from "./Images/save.png";
-import SharePng from "./Images/share.png";
+// import { Button, Modal } from "flowbite-react";
+// import UserImg from "./Images/userpng.png";
+// import MsgPng from "./Images/msg.png";
+// import SavePng from "./Images/save.png";
+// import SharePng from "./Images/share.png";
+import { useNavigate } from "react-router-dom/dist";
 
 
 function Main() {
 	const [openModal, setOpenModal] = useState(false);
+	const navigate = useNavigate();
 
 	return (
 		<>
@@ -32,15 +34,12 @@ function Main() {
 			</div>
 
 			<div className="px-3 flex gap-4 flex-col">
-				<ImgCard openModal={openModal} setOpenModal={setOpenModal} />
-				<Card openModal={openModal} setOpenModal={setOpenModal} />
-				<ImgCard openModal={openModal} setOpenModal={setOpenModal} />
-				<Card openModal={openModal} setOpenModal={setOpenModal} />
-				<ImgCard openModal={openModal} setOpenModal={setOpenModal} />
-				<Card openModal={openModal} setOpenModal={setOpenModal} />
+				<ImgCard id={"123"} navigate={navigate}/>
+				<Card id={"123"} navigate={navigate} />
+						
 			</div>
 
-			<Modal
+			{/* <Modal
 				show={openModal}
 				onClose={() => setOpenModal(false)}
 				className={`transition-opacity duration-800 ease-in-out transform ${
@@ -134,7 +133,7 @@ function Main() {
 						</div>
 					</div>
 				</Modal.Body>
-			</Modal>
+			</Modal> */}
 		</>
 	);
 }
