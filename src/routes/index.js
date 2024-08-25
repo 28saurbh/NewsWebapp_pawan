@@ -10,7 +10,7 @@ function Index() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<Home />} />
-                <Route path="/news/:id" element={<NewsDetails />} />
+                <Route path="/news/" element={<NewsDetails />} />
                 <Route path="*" element={<Home />} />
             </Routes>
         </BrowserRouter>

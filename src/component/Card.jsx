@@ -11,7 +11,12 @@ function Card(props) {
 				style={{
 					boxShadow: "-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.32)",
 				}}
-				onClick={() => props.navigate(`/news/${props.id}`)}
+				onClick={() => props.navigate('/news', {
+					state: {
+						id: props.id
+					}
+				})}
+
 			>
 				<div>
 					<h3 className="text-base">
@@ -55,7 +60,13 @@ export function ImgCard(props) {
 				style={{
 					boxShadow: "-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.32)",
 				}}
-				onClick={() => props.navigate(`/news/${props.id}`)}
+				onClick={() => props.navigate('/news', {
+					state: {
+						id: props.id
+					}
+				})}
+
+
 			>
 				<div>
 					<img
@@ -93,7 +104,7 @@ export function ImgCard(props) {
 						<span className="text-xs ms-5">Feb. 4, 2023</span>
 					</div>
 				</div>
-			</div>
+			</div >
 		</>
 	);
 }

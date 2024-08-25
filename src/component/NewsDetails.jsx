@@ -1,20 +1,36 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import UserImg from "./Images/userpng.png";
 import MsgPng from "./Images/msg.png";
 import SavePng from "./Images/save.png";
 import SharePng from "./Images/share.png";
 import { ArrowBack } from '@mui/icons-material';
 import Card, { ImgCard } from "./Card";
-import { useNavigate } from 'react-router-dom/dist';
+import { useLocation, useNavigate } from 'react-router-dom/dist';
+import {axiosInstance as axios} from '../interceptors'
 
 function NewsDetails() {
 
     const [load, setload] = useState(false);
     const navigate = useNavigate()
+    const location = useLocation();
+
+    const newsId = location?.state?.id
 
     setTimeout(() => {
         setload(true);
     }, 1000)
+
+    async function getApiData() {
+        const reqData = {
+            userId: newsId
+        }
+        const res = await axios.get("https://jsonplaceholder.typicode.com/posts" , { params : reqData , data : {}})  
+        console.log(res)
+    }
+
+    useEffect(() => {
+        getApiData()
+    }, [newsId])
 
 
     return (

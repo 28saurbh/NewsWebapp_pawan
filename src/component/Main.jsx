@@ -34,8 +34,8 @@ function Main() {
 			</div>
 
 			<div className="px-3 flex gap-4 flex-col">
-				<ImgCard id={"123"} navigate={navigate}/>
-				<Card id={"123"} navigate={navigate} />
+				<ImgCard id={"02"} navigate={navigate}/>
+				<Card id={"01"} navigate={navigate} />
 						
 			</div>
 
